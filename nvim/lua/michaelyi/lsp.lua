@@ -4,6 +4,8 @@ lsp_zero.on_attach(function(client, bufnr)
     lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
+require("java").setup()
+
 require("mason").setup({})
 require("mason-lspconfig").setup({
     ensure_installed = {
