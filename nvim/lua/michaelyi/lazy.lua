@@ -13,6 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	{"Mofiqul/vscode.nvim"},
+
 	{
 		"nvim-telescope/telescope.nvim", tag = "0.1.6",
 		dependencies = { "nvim-lua/plenary.nvim" },
@@ -29,6 +30,7 @@ require("lazy").setup({
 			}
 		}
 	},
+
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
@@ -69,6 +71,7 @@ require("lazy").setup({
             })
         end
     },
+
     {
         "github/copilot.vim",
         config = function()
@@ -79,9 +82,20 @@ require("lazy").setup({
             end
         end
     },
+
     {
         "nvim-lualine/lualine.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" }
-    }
+    },
+
+    {"williamboman/mason.nvim"},
+    {"williamboman/mason-lspconfig.nvim"},
+
+    {"VonHeikemen/lsp-zero.nvim", branch = "v3.x"},
+    {"neovim/nvim-lspconfig"},
+    {"hrsh7th/cmp-nvim-lsp"},
+    {"hrsh7th/nvim-cmp"},
+    {"L3MON4D3/LuaSnip"},
+
 })
 
