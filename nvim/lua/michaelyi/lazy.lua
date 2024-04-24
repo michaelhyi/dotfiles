@@ -81,6 +81,7 @@ require("lazy").setup({
     },
 
     {'williamboman/mason.nvim'},
+
     {'williamboman/mason-lspconfig.nvim'},
 
     {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
@@ -110,6 +111,8 @@ require("lazy").setup({
             }
         },
     },
+
+    {'mfussenegger/nvim-jdtls'},
 
     {
         'numToStr/Comment.nvim',
