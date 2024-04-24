@@ -89,8 +89,6 @@ require("lazy").setup({
     {'hrsh7th/nvim-cmp'},
     {'L3MON4D3/LuaSnip'},
 
-    {'mfussenegger/nvim-jdtls'},
-
     {
         'nvim-java/nvim-java',
         dependencies = {
