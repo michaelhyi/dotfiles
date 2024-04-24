@@ -1,6 +1,8 @@
-require("lualine").setup({
+require('lualine').setup({
     options = {
-        theme = "vscode",
+        -- ...
+        theme = 'vscode',
+        -- ...
     },
 })
 

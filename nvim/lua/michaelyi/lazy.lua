@@ -12,18 +12,19 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	{"Mofiqul/vscode.nvim"},
+	{'Mofiqul/vscode.nvim'},
 
 	{
-		"nvim-telescope/telescope.nvim", tag = "0.1.6",
-		dependencies = { "nvim-lua/plenary.nvim" },
+		'nvim-telescope/telescope.nvim', tag = '0.1.6',
+        -- or                              , branch = '0.1.x',
+		dependencies = { 'nvim-lua/plenary.nvim' },
 		config = function()
-			require("telescope").setup()
-			builtin = require("telescope.builtin")
+			require('telescope').setup()
+			builtin = require('telescope.builtin')
 		end,
 		keys = {
 			{
-				"<leader>ff",
+				'<leader>ff',
 				function()
 					builtin.find_files()
 				end
@@ -44,26 +45,17 @@ require("lazy").setup({
                     "vim",
                     "vimdoc",
                     "query",
-                    "angular",
-                    "asm",
-                    "bash",
-                    "cpp",
                     "css",
-                    "csv",
                     "dockerfile",
-                    "gitignore",
                     "graphql",
-                    "groovy",
                     "html",
                     "java",
                     "javascript",
                     "json",
-                    "kotlin",
                     "markdown",
-                    "python",
                     "sql",
                     "typescript",
-                    "yaml",
+                    "yaml"
                 },
                 sync_install = false,
                 highlight = { enable = true },
@@ -84,18 +76,20 @@ require("lazy").setup({
     },
 
     {
-        "nvim-lualine/lualine.nvim",
-        dependencies = { "nvim-tree/nvim-web-devicons" }
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' }
     },
 
-    {"williamboman/mason.nvim"},
-    {"williamboman/mason-lspconfig.nvim"},
+    {'williamboman/mason.nvim'},
+    {'williamboman/mason-lspconfig.nvim'},
 
-    {"VonHeikemen/lsp-zero.nvim", branch = "v3.x"},
-    {"neovim/nvim-lspconfig"},
-    {"hrsh7th/cmp-nvim-lsp"},
-    {"hrsh7th/nvim-cmp"},
-    {"L3MON4D3/LuaSnip"},
+    {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
+    {'neovim/nvim-lspconfig'},
+    {'hrsh7th/cmp-nvim-lsp'},
+    {'hrsh7th/nvim-cmp'},
+    {'L3MON4D3/LuaSnip'},
+
+    {'mfussenegger/nvim-jdtls'},
 
     {
         'nvim-java/nvim-java',
