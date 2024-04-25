@@ -30,7 +30,7 @@ require("lazy").setup({
 				end
 			},
             {
-				'<leader>fzf',
+				'<leader>fz',
 				function()
 					builtin.grep_string({ search = vim.fn.input("Grep > ") })
 				end
