@@ -11,3 +11,8 @@ map('n', '<A-.>', '<Cmd>BufferNext<CR>', opts)
 -- Close buffer
 map('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
 
+map('n', '<leader>do', '<Cmd>DiffviewOpen<CR>', opts)
+map('n', '<leader>dc', '<Cmd>DiffviewClose<CR>', opts)
+
+map('n', '<leader>js', '<Cmd>JdtWipeDataAndRestart<CR>', opts)
+

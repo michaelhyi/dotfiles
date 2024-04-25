@@ -28,7 +28,14 @@ require("lazy").setup({
 				function()
 					builtin.find_files()
 				end
+			},
+            {
+				'<leader>fzf',
+				function()
+					builtin.grep_string({ search = vim.fn.input("Grep > ") })
+				end
 			}
+
 		}
 	},
 
@@ -137,7 +144,16 @@ require("lazy").setup({
         version = '^1.0.0', -- optional: only update when a new 1.x version is released
     },
 
-    {"sindrets/diffview.nvim"}
+    {"sindrets/diffview.nvim"},
+
+    {
+        "nvim-tree/nvim-tree.lua",
+        version = "*",
+        lazy = false,
+        dependencies = {
+            "nvim-tree/nvim-web-devicons",
+        }
+    }
 
 })
 
