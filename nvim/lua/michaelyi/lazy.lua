@@ -66,8 +66,11 @@ require("lazy").setup({
                 },
                 sync_install = false,
                 highlight = { enable = true },
-                indent = { enable = true },  
-            })
+                indent = { enable = true },
+                autotag = {
+                    enable = true,
+                },
+           })
         end
     },
 
@@ -153,7 +156,16 @@ require("lazy").setup({
         dependencies = {
             "nvim-tree/nvim-web-devicons",
         }
-    }
+    },
+
+    {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        config = true
+        -- use opts = {} for passing setup options
+        -- this is equalent to setup({}) function
+    },
+    {'windwp/nvim-ts-autotag'}
 
 })
 
