@@ -1,5 +1,8 @@
 source $HOMEBREW_PREFIX/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 export JAVA_HOME="/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home"
+export PATH=${PATH}:/opt/homebrew/Cellar/mysql@8.0/8.0.36_1/bin
+
+alias v='nvim .'
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
