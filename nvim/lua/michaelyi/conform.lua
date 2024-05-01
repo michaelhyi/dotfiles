@@ -2,6 +2,15 @@ require("conform").setup({
     formatters_by_ft = {
         lua = { "stylua" },
         java = { "google-java-format" },
+        javascript = { "prettier" },
+        javascriptreact = { "prettier" },
+        typescript = { "prettier" },
+        typescriptreact = { "prettier" },
+        html = { "prettier" },
+        json = { "prettier" },
+        graphql = { "prettier" },
+        markdown = { "prettier" },
+        yaml = { "prettier", }
     },
 })
 
@@ -16,4 +25,3 @@ vim.api.nvim_create_user_command("Format", function(args)
     end
     require("conform").format({ async = true, lsp_fallback = true, range = range })
 end, { range = true })
-

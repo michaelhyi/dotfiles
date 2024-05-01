@@ -1,4 +1,4 @@
-require('telescope').setup{
+require('telescope').setup {
     defaults = {
         -- Default configuration for telescope goes here:
         -- config_key = value,
@@ -20,13 +20,13 @@ require('telescope').setup{
         -- Now the picker_config_key will be applied every time you call this
         -- builtin picker
         find_files = {
-            hidden = true
+            additional_args = { "--hidden", "-g", "!.git" }
         },
         grep_string = {
-            additional_args = {"--hidden"}
+            additional_args = { "--hidden" }
         },
         live_grep = {
-            additional_args = {"--hidden"}
+            additional_args = { "--hidden" }
         },
     },
     extensions = {
@@ -37,4 +37,3 @@ require('telescope').setup{
         -- please take a look at the readme of the extension you want to configure
     }
 }
-

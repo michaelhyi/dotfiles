@@ -45,4 +45,5 @@ vim.api.nvim_set_keymap(
   { noremap = true, silent = true }
 )
 
-vim.api.nvim_set_keymap("n", "<leader>fo", ":Format<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>f", ":Format<CR>", { noremap = true, silent = true })
+

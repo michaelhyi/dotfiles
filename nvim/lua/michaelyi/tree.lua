@@ -10,19 +10,24 @@ require("nvim-tree").setup()
 
 -- OR setup with some options
 require("nvim-tree").setup({
-  sort = {
-    sorter = "case_sensitive",
-  },
-  view = {
-    width = 30,
-  },
-  renderer = {
-    group_empty = true,
-  },
-  filters = {
-    dotfiles = false,
-  },
+    sort = {
+        sorter = "case_sensitive",
+    },
+    view = {
+        width = 30,
+    },
+    renderer = {
+        group_empty = true,
+    },
+    filters = {
+        dotfiles = false,
+    },
+    update_focused_file = {
+        enable = true,
+    },
+    diagnostics = {
+        enable = true,
+    },
 })
 
 vim.api.nvim_set_keymap("n", "<leader>tr", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
-

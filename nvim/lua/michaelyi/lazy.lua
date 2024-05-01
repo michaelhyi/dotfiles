@@ -12,7 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    { 'Mofiqul/vscode.nvim' },
+    { "lunarvim/darkplus.nvim" },
 
     {
         'nvim-telescope/telescope.nvim',
