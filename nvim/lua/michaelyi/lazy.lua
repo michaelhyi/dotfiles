@@ -19,33 +19,6 @@ require("lazy").setup({
         tag = '0.1.6',
         -- or                              , branch = '0.1.x',
         dependencies = { 'nvim-lua/plenary.nvim' },
-        config = function()
-            require('telescope').setup()
-            builtin = require('telescope.builtin')
-        end,
-        keys = {
-
-            {
-                '<leader>ff',
-                function()
-                    builtin.find_files()
-                end
-            },
-
-            {
-                '<leader>fg',
-                function()
-                    builtin.git_files()
-                end
-            },
-
-            {
-                '<leader>fz',
-                function()
-                    builtin.grep_string({ search = vim.fn.input("Grep > ") })
-                end
-            }
-        }
     },
 
     {
