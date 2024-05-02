@@ -21,51 +21,9 @@ require("lazy").setup({
         dependencies = { 'nvim-lua/plenary.nvim' },
     },
 
-    {
-        "nvim-treesitter/nvim-treesitter",
-        build = ":TSUpdate",
-        config = function()
-            local configs = require("nvim-treesitter.configs")
+    { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 
-            configs.setup({
-                ensure_installed = {
-                    "c",
-                    "lua",
-                    "vim",
-                    "vimdoc",
-                    "query",
-                    "css",
-                    "dockerfile",
-                    "graphql",
-                    "html",
-                    "java",
-                    "javascript",
-                    "json",
-                    "markdown",
-                    "sql",
-                    "typescript",
-                    "yaml"
-                },
-                sync_install = false,
-                highlight = { enable = true },
-                indent = { enable = true },
-                autotag = {
-                    enable = true,
-                },
-            })
-        end
-    },
-
-    {
-        "github/copilot.vim",
-        config = function()
-            local sysname = vim.loop.os_uname().sysname
-            if sysname == "Darwin" then
-                vim.g.copilot_node_command
-                = "/opt/homebrew/Cellar/node@18/18.19.1_1/bin/node"
-            end
-        end
-    },
+    { "github/copilot.vim" },
 
     {
         'nvim-lualine/lualine.nvim',
@@ -106,13 +64,7 @@ require("lazy").setup({
 
     { 'mfussenegger/nvim-jdtls' },
 
-    {
-        'numToStr/Comment.nvim',
-        opts = {
-            -- add any options here
-        },
-        lazy = false,
-    },
+    { 'numToStr/Comment.nvim',  opts = {}, lazy = false },
 
     {
         'romgrk/barbar.nvim',
@@ -121,12 +73,7 @@ require("lazy").setup({
             'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
         },
         init = function() vim.g.barbar_auto_setup = false end,
-        opts = {
-            -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
-            -- animation = true,
-            -- insert_at_start = true,
-            -- …etc.
-        },
+        opts = {},
         version = '^1.0.0', -- optional: only update when a new 1.x version is released
     },
 
@@ -145,14 +92,9 @@ require("lazy").setup({
         'windwp/nvim-autopairs',
         event = "InsertEnter",
         config = true
-        -- use opts = {} for passing setup options
-        -- this is equalent to setup({}) function
     },
     { 'windwp/nvim-ts-autotag' },
 
-    {
-        'stevearc/conform.nvim',
-        opts = {},
-    }
+    { 'stevearc/conform.nvim' }
 
 })
