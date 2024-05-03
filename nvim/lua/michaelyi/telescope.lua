@@ -1,7 +1,21 @@
 require("telescope").setup({
     pickers = {
         find_files = {
-            file_ignore_patterns = { 'node_modules', '.git', 'bin', 'build', 'settings', '.gradle' },
+            file_ignore_patterns = {
+                '^.git/',
+                '^.gradle/',
+                '^.idea/',
+                '^.settings/',
+                '^.vscode/',
+                '^bin/',
+                '^build/',
+                '^coverage/',
+                '^node_modules/',
+                ".classpath",
+                ".DS_Store",
+                ".factorypath",
+                ".project",
+            },
             hidden = true,
             no_ignore = true,
         },

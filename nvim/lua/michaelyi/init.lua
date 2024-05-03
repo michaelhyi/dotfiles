@@ -1,5 +1,6 @@
 require("michaelyi.lazy")
 
+require("michaelyi.conform")
 require("michaelyi.copilot")
 require("michaelyi.lsp")
 require("michaelyi.lualine")
