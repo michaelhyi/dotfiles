@@ -1,5 +1,6 @@
 require("conform").setup({
     formatters_by_ft = {
+        go = { "goimports", "gofmt" },
         lua = { "stylua" },
         java = { "google-java-format" },
         javascript = { "prettier" },
