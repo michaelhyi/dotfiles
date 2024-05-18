@@ -15,7 +15,7 @@ map('n', '<leader>do', '<Cmd>DiffviewOpen<CR>', opts)
 map('n', '<leader>dc', '<Cmd>DiffviewClose<CR>', opts)
 
 map('n', '<leader>js', '<Cmd>JdtWipeDataAndRestart<CR>', opts)
-vim.keymap.set({'n', 'v'}, 'p', 'P', { noremap = true })
+vim.keymap.set({'n', 'v'}, 'p', 'pgvy', { noremap = true })
 
 
 vim.diagnostic.config({
