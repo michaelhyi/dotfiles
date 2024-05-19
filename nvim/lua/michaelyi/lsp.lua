@@ -41,8 +41,8 @@ cmp.setup({
     },
     mapping = {
         ['<Tab>'] = cmp.mapping.confirm({ select = false }),
-        ['<Up>'] = cmp.mapping.select_prev_item({ behavior = 'select' }),
-        ['<Down>'] = cmp.mapping.select_next_item({ behavior = 'select' }),
+        ['<C-p>'] = cmp.mapping.select_prev_item({ behavior = 'select' }),
+        ['<C-n>'] = cmp.mapping.select_next_item({ behavior = 'select' }),
     },
     snippet = {
         expand = function(args)
