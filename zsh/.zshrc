@@ -3,6 +3,7 @@ export JAVA_HOME="/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home
 export PATH=${PATH}:/opt/homebrew/Cellar/mysql@8.0/8.0.37/bin
 
 alias v='nvim .'
+alias ssh="kitten ssh"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
