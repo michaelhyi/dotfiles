@@ -71,8 +71,6 @@ require("lazy").setup({
     },
     { "mfussenegger/nvim-jdtls" },
 
-    { "chrisgrieser/nvim-spider", lazy = true },
-
     {
         "kylechui/nvim-surround",
         version = "*",
