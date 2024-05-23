@@ -11,13 +11,29 @@ map('n', '<A-.>', '<Cmd>BufferNext<CR>', opts)
 -- Close buffer
 map('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
 
-map('n', '<leader>do', '<Cmd>DiffviewOpen<CR>', opts)
-map('n', '<leader>dc', '<Cmd>DiffviewClose<CR>', opts)
-
 map('n', '<leader>js', '<Cmd>JdtWipeDataAndRestart<CR>', opts)
 
+vim.keymap.set(
+    { "n", "o", "x" },
+    "w",
+    "<cmd>lua require('spider').motion('w')<CR>",
+    { desc = "Spider-w" }
+)
+vim.keymap.set(
+    { "n", "o", "x" },
+    "e",
+    "<cmd>lua require('spider').motion('e')<CR>",
+    { desc = "Spider-e" }
+)
+vim.keymap.set(
+    { "n", "o", "x" },
+    "b",
+    "<cmd>lua require('spider').motion('b')<CR>",
+    { desc = "Spider-b" }
+)
+
 vim.diagnostic.config({
-  virtual_text = false, -- Turn off inline diagnostics
+    virtual_text = false, -- Turn off inline diagnostics
 })
 
 -- Use this if you want it to automatically show all diagnostics on the
@@ -28,21 +44,20 @@ vim.diagnostic.config({
 
 -- Show all diagnostics on current line in floating window
 vim.api.nvim_set_keymap(
-  'n', '<leader>d', ':lua vim.diagnostic.open_float()<CR>', 
-  { noremap = true, silent = true }
+    'n', '<leader>d', ':lua vim.diagnostic.open_float()<CR>',
+    { noremap = true, silent = true }
 )
 -- Go to next diagnostic (if there are multiple on the same line, only shows
 -- one at a time in the floating window)
 vim.api.nvim_set_keymap(
-  'n', '<leader>n', ':lua vim.diagnostic.goto_next()<CR>',
-  { noremap = true, silent = true }
+    'n', '<leader>n', ':lua vim.diagnostic.goto_next()<CR>',
+    { noremap = true, silent = true }
 )
 -- Go to prev diagnostic (if there are multiple on the same line, only shows
 -- one at a time in the floating window)
 vim.api.nvim_set_keymap(
-  'n', '<leader>p', ':lua vim.diagnostic.goto_prev()<CR>',
-  { noremap = true, silent = true }
+    'n', '<leader>p', ':lua vim.diagnostic.goto_prev()<CR>',
+    { noremap = true, silent = true }
 )
 
 vim.api.nvim_set_keymap("n", "<leader>f", ":Format<CR>", { noremap = true, silent = true })
-

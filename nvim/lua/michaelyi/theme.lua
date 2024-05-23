@@ -1,7 +1,7 @@
-vim.o.background = 'dark'
+vim.o.background = "dark"
 
-local c = require('vscode.colors').get_colors()
-require('vscode').setup({
+local c = require("vscode.colors").get_colors()
+require("vscode").setup({
     transparent = false,
 
     -- Enable italic comment
@@ -15,7 +15,7 @@ require('vscode').setup({
 
     -- Override colors (see ./lua/vscode/colors.lua)
     color_overrides = {
-        vscLineNumber = '#FFFFFF',
+        vscLineNumber = "#FFFFFF",
     },
 
     -- Override highlight groups (see ./lua/vscode/theme.lua)
@@ -25,7 +25,5 @@ require('vscode').setup({
         Cursor = { fg=c.vscDarkBlue, bg=c.vscLightGreen, bold=true },
     }
 })
--- require('vscode').load()
 
--- load the theme without affecting devicon colors.
 vim.cmd.colorscheme "vscode"

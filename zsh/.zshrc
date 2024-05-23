@@ -1,6 +1,5 @@
 source $HOMEBREW_PREFIX/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 export JAVA_HOME="/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home"
-export PATH=${PATH}:/opt/homebrew/Cellar/mysql@8.0/8.0.37/bin
 
 alias v='nvim .'
 alias ssh="kitten ssh"
