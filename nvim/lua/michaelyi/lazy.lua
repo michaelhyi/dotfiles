@@ -100,9 +100,8 @@ require("lazy").setup({
         dependencies = { "nvim-lua/plenary.nvim" },
     },
 
-
     { "mbbill/undotree" },
 
-    { "Mofiqul/vscode.nvim" },
+    { "Mofiqul/vscode.nvim" }
 
 })
