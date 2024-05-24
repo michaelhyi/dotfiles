@@ -100,6 +100,8 @@ require("lazy").setup({
 
     { "mbbill/undotree" },
 
+    { "tpope/vim-sleuth" },
+
     { "Mofiqul/vscode.nvim" }
 
 })
