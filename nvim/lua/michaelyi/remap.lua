@@ -14,7 +14,7 @@ map('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
 map('n', '<leader>js', '<Cmd>JdtWipeDataAndRestart<CR>', opts)
 
 vim.diagnostic.config({
-    virtual_text = false, -- Turn off inline diagnostics
+    virtual_text = true, -- Turn off inline diagnostics
 })
 
 -- Use this if you want it to automatically show all diagnostics on the
