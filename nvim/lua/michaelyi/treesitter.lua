@@ -16,6 +16,7 @@ configs.setup({
         "javascript",
         "json",
         "markdown",
+        "python",
         "rust",
         "sql",
         "typescript",

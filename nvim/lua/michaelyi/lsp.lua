@@ -18,6 +18,7 @@ require("mason-lspconfig").setup({
         "html",
         "lua_ls",
         "markdown_oxide",
+        "pyright",
         "rust_analyzer",
         "sqlls",
         "tailwindcss",
