@@ -12,7 +12,6 @@ configs.setup({
         "go",
         "graphql",
         "html",
-        "java",
         "javascript",
         "json",
         "markdown",

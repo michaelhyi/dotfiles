@@ -1,29 +1,4 @@
-require("telescope").setup({
-    pickers = {
-        find_files = {
-            file_ignore_patterns = {
-                '.git/.*',
-                '.gradle/.,*',
-                '.idea/.*',
-                '.settings/.*',
-                '.vscode/.*',
-                'bin/.*',
-                'build/.*',
-                'coverage/.*',
-                'gradle/.*',
-                'node_modules/.*',
-                ".classpath",
-                ".DS_Store",
-                ".factorypath",
-                ".project",
-                "gradlew",
-                "gradlew.bat",
-            },
-            hidden = true,
-            no_ignore = true,
-        },
-    }
-})
+require("telescope").setup({})
 
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})

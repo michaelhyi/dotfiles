@@ -11,8 +11,6 @@ map('n', '<A-.>', '<Cmd>BufferNext<CR>', opts)
 -- Close buffer
 map('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
 
-map('n', '<leader>js', '<Cmd>JdtWipeDataAndRestart<CR>', opts)
-
 vim.diagnostic.config({
     virtual_text = true, -- Turn off inline diagnostics
 })
