@@ -12,42 +12,67 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    { "numToStr/Comment.nvim", opts = {}, lazy = false },
+    -- colorscheme
+    { "Mofiqul/vscode.nvim" },
 
-    { "L3MON4D3/LuaSnip" },
-
-    {
-        "romgrk/barbar.nvim",
-        dependencies = { "lewis6991/gitsigns.nvim", "nvim-tree/nvim-web-devicons" },
-        init = function() vim.g.barbar_auto_setup = false end,
-        opts = {},
-        version = "^1.0.0",
-    },
-
-    { "stevearc/conform.nvim" },
-
+    -- copilot
     { "github/copilot.vim" },
 
-    { "VonHeikemen/lsp-zero.nvim", branch = "v3.x" },
-    { "neovim/nvim-lspconfig" },
-    { "hrsh7th/cmp-nvim-lsp" },
-    { "hrsh7th/nvim-cmp" },
-
+    -- files
     {
-        "nvim-lualine/lualine.nvim",
-        dependencies = { "nvim-tree/nvim-web-devicons" }
+        "nvim-telescope/telescope.nvim",
+        tag = "0.1.6",
+        dependencies = { "nvim-lua/plenary.nvim" },
+    },
+    {
+        'stevearc/oil.nvim',
+        opts = {},
+        -- Optional dependencies
+        dependencies = { "nvim-tree/nvim-web-devicons" },
     },
 
+    -- formatting
+    { "stevearc/conform.nvim" },
+    { "tpope/vim-sleuth" },
+
+    -- lsp
+    { 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },
+    { 'neovim/nvim-lspconfig' },
+    { 'hrsh7th/cmp-nvim-lsp' },
+    { 'hrsh7th/nvim-cmp' },
+    { 'L3MON4D3/LuaSnip' },
     { "williamboman/mason.nvim" },
     { "williamboman/mason-lspconfig.nvim" },
+    {
+        'nvim-java/nvim-java',
+        dependencies = {
+            'nvim-java/lua-async-await',
+            'nvim-java/nvim-java-refactor',
+            'nvim-java/nvim-java-core',
+            'nvim-java/nvim-java-test',
+            'nvim-java/nvim-java-dap',
+            'MunifTanjim/nui.nvim',
+            'neovim/nvim-lspconfig',
+            'mfussenegger/nvim-dap',
+            {
+                'williamboman/mason.nvim',
+                opts = {
+                    registries = {
+                        'github:nvim-java/mason-registry',
+                        'github:mason-org/mason-registry',
+                    },
+                },
+            }
+        },
+    },
 
+    -- pairs
     {
         "windwp/nvim-autopairs",
         event = "InsertEnter",
         config = true
     },
     { "windwp/nvim-ts-autotag" },
-
     {
         "kylechui/nvim-surround",
         version = "*",
@@ -58,27 +83,9 @@ require("lazy").setup({
         end
     },
 
-    {
-        "nvim-tree/nvim-tree.lua",
-        version = "*",
-        lazy = false,
-        dependencies = {
-            "nvim-tree/nvim-web-devicons",
-        }
-    },
-
+    -- treesitter
     { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 
-    {
-        "nvim-telescope/telescope.nvim",
-        tag = "0.1.6",
-        dependencies = { "nvim-lua/plenary.nvim" },
-    },
-
+    -- undotree
     { "mbbill/undotree" },
-
-    { "tpope/vim-sleuth" },
-
-    { "Mofiqul/vscode.nvim" }
-
 })

@@ -19,6 +19,7 @@ configs.setup({
         "python",
         "rust",
         "sql",
+        "toml",
         "typescript",
         "yaml"
     },

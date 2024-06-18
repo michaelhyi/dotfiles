@@ -6,10 +6,12 @@ local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
 -- Move to previous/next
-map('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
-map('n', '<A-.>', '<Cmd>BufferNext<CR>', opts)
+map('n', '<A-,>', '<Cmd>bprevious<CR>', opts)
+map('n', '<A-.>', '<Cmd>bnext<CR>', opts)
 -- Close buffer
-map('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
+map('n', '<A-c>', '<Cmd>bd<CR>', opts)
+
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 vim.diagnostic.config({
     virtual_text = true, -- Turn off inline diagnostics
