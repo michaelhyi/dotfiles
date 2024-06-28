@@ -16,6 +16,7 @@ require("mason-lspconfig").setup({
         "gopls",
         "graphql",
         "html",
+        "jsonls",
         "lua_ls",
         "markdown_oxide",
         "pyright",
