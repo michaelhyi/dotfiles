@@ -8,14 +8,15 @@ require 'nvim-treesitter.configs'.setup {
         "query",
         "markdown",
         "markdown_inline",
+
         "asm",
         "c",
+        "cpp",
         "css",
         "go",
         "html",
         "java",
         "javascript",
-        "json",
         "python",
         "sql"
     },
