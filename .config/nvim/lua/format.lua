@@ -3,11 +3,13 @@ require("conform").setup({
         c = { "clang-format" },
         cpp = { "clang-format" },
         css = { "stylelint" },
+        go = { "gofmt" },
         html = { "htmlbeautifier" },
-        lua = { "stylua" },
-        python = { "isort", "black" },
         java = { "google-java-format" },
         javascript = { "prettierd", "prettier", stop_after_first = true },
+        lua = { "stylua" },
+        python = { "isort", "black" },
+        sql = { "sqlfluff" },
     },
 
     format_on_save = {

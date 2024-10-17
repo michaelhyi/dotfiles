@@ -7,7 +7,10 @@ return require("packer").startup(function(use)
     -- Packer can manage itself
     use "wbthomason/packer.nvim"
 
-    use "github/copilot.vim"
+    use {
+        "nvim-treesitter/nvim-treesitter",
+        run = ":TSUpdate"
+    }
 
     use {
         "nvim-telescope/telescope.nvim", tag = "0.1.8",
@@ -16,13 +19,13 @@ return require("packer").startup(function(use)
     }
 
     use {
+        "VonHeikemen/lsp-zero.nvim", branch = "v4.x",
+        "hrsh7th/nvim-cmp",
+        "hrsh7th/cmp-nvim-lsp",
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
         "neovim/nvim-lspconfig",
     }
-    use({ "VonHeikemen/lsp-zero.nvim", branch = "v4.x" })
-    use({ "hrsh7th/nvim-cmp" })
-    use({ "hrsh7th/cmp-nvim-lsp" })
 
     use({
         "stevearc/conform.nvim",
@@ -31,8 +34,5 @@ return require("packer").startup(function(use)
         end,
     })
 
-    use {
-        "nvim-treesitter/nvim-treesitter",
-        run = ":TSUpdate"
-    }
+    use "github/copilot.vim"
 end)
