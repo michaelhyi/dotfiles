@@ -11,7 +11,7 @@ map('n', '<A-.>', '<Cmd>bnext<CR>', opts)
 -- Close buffer
 map('n', '<A-c>', '<Cmd>bd<CR>', opts)
 
-vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "-", "<CMD>Ex<CR>", { desc = "Open parent directory" })
 
 vim.diagnostic.config({
     virtual_text = true, -- Turn off inline diagnostics

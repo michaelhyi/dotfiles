@@ -12,23 +12,18 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    -- colorscheme
     -- { "Mofiqul/vscode.nvim" },
 
-    -- copilot
     { "github/copilot.vim" },
 
-    -- files
     {
         "nvim-telescope/telescope.nvim",
         tag = "0.1.6",
         dependencies = { "nvim-lua/plenary.nvim" },
     },
 
-    -- formatting
     { "stevearc/conform.nvim" },
 
-    -- lsp
     { 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },
     { 'neovim/nvim-lspconfig' },
     { 'hrsh7th/cmp-nvim-lsp' },
@@ -59,7 +54,6 @@ require("lazy").setup({
         },
     },
 
-    -- pairs
     {
         "windwp/nvim-autopairs",
         event = "InsertEnter",
@@ -67,6 +61,5 @@ require("lazy").setup({
     },
     { "windwp/nvim-ts-autotag" },
 
-    -- treesitter
     { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 })
