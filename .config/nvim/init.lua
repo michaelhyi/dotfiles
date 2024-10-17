@@ -1,3 +1,4 @@
+require("format")
 require("general")
 require("lsp")
 require("plugins")
