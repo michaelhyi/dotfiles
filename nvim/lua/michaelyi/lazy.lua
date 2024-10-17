@@ -13,7 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     -- colorscheme
-    { "Mofiqul/vscode.nvim" },
+    -- { "Mofiqul/vscode.nvim" },
 
     -- copilot
     { "github/copilot.vim" },
@@ -24,16 +24,9 @@ require("lazy").setup({
         tag = "0.1.6",
         dependencies = { "nvim-lua/plenary.nvim" },
     },
-    {
-        'stevearc/oil.nvim',
-        opts = {},
-        -- Optional dependencies
-        dependencies = { "nvim-tree/nvim-web-devicons" },
-    },
 
     -- formatting
     { "stevearc/conform.nvim" },
-    { "tpope/vim-sleuth" },
 
     -- lsp
     { 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },
@@ -73,19 +66,7 @@ require("lazy").setup({
         config = true
     },
     { "windwp/nvim-ts-autotag" },
-    {
-        "kylechui/nvim-surround",
-        version = "*",
-        event = "VeryLazy",
-        config = function()
-            require("nvim-surround").setup({
-            })
-        end
-    },
 
     -- treesitter
     { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-
-    -- undotree
-    { "mbbill/undotree" },
 })
