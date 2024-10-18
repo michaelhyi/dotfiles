@@ -31,5 +31,7 @@ return require("packer").startup(function(use)
         end,
     })
 
+    use "Mofiqul/vscode.nvim"
+
     use "github/copilot.vim"
 end)
