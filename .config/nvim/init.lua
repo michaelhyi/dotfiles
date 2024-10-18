@@ -1,3 +1,4 @@
+require("autotag")
 require("format")
 require("general")
 require("lsp")
