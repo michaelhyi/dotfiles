@@ -1,6 +1,6 @@
 require("vscode").setup({
-    italic_comments = true,
-    underline_links = true,
+	italic_comments = true,
+	underline_links = true,
 })
 
-vim.cmd.colorscheme "vscode"
+vim.cmd.colorscheme("vscode")
