@@ -34,7 +34,6 @@ require("mason-lspconfig").setup({
 		"jdtls",
 		"lua_ls",
 		"pyright",
-		"sqlls",
 	},
 
 	handlers = {

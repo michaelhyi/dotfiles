@@ -25,13 +25,6 @@ return require("packer").startup(function(use)
 	})
 
 	use("windwp/nvim-ts-autotag")
-	use({
-		"windwp/nvim-autopairs",
-		event = "InsertEnter",
-		config = function()
-			require("nvim-autopairs").setup({})
-		end,
-	})
 
 	use("Mofiqul/vscode.nvim")
 
