@@ -33,14 +33,6 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	use({
-		"stevearc/conform.nvim",
-		config = function()
-			require("conform").setup()
-		end,
-	})
-	use("zapling/mason-conform.nvim")
-
 	use("Mofiqul/vscode.nvim")
 
 	use("github/copilot.vim")

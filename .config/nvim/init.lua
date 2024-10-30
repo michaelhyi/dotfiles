@@ -1,6 +1,5 @@
 require("autotag")
 require("colorscheme")
-require("format")
 require("general")
 require("lsp")
 require("plugins")
