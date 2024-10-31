@@ -1,5 +1,6 @@
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
 local workspace_dir = "~/jdtls_workspace" .. project_name
+vim.uv.os_setenv("JAVA_HOME", "~/opt/homebrew/Cellar/openjdk@17/17.0.13/libexec/openjdk.jdk/Contents/Home")
 
 local config = {
 	cmd = {
@@ -24,7 +25,16 @@ local config = {
 	},
 	root_dir = vim.fs.root(0, { ".git", "mvnw", "gradlew" }),
 	settings = {
-		java = {},
+		java = {
+			configuration = {
+				runtimes = {
+					{
+						runtime = "JavaSE-1.8",
+						path = "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home",
+					},
+				},
+			},
+		},
 	},
 }
 
