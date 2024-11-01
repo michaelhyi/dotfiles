@@ -22,9 +22,6 @@ return require("packer").startup(function(use)
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
-
-		"mfussenegger/nvim-jdtls",
-		"artur-shaik/jc.nvim",
 	})
 
 	use("windwp/nvim-ts-autotag")
