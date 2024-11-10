@@ -27,6 +27,4 @@ return require("packer").startup(function(use)
 	use("windwp/nvim-ts-autotag")
 
 	use("Mofiqul/vscode.nvim")
-
-	use("github/copilot.vim")
 end)

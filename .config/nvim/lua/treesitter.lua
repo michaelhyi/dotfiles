@@ -1,6 +1,7 @@
 require("nvim-treesitter.configs").setup({
 	ensure_installed = {
 		"asm",
+               "bash",
 		"c",
 		"cpp",
 		"css",
