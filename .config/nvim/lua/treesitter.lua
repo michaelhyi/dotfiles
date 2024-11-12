@@ -10,6 +10,7 @@ require("nvim-treesitter.configs").setup({
 		"javascript",
 		"lua",
 		"markdown",
+		"proto",
 		"python",
 		"sql",
 	},
